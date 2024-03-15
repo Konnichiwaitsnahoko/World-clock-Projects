@@ -79,7 +79,7 @@ select:hover {
   font-weight: bold;
 }
 
-.time small {
+.time .am-pm {
   font-size: 13px;
   vertical-align: middle;
 }
@@ -93,7 +93,8 @@ h2 {
 }
 
 .date {
-  opacity: 0.6;
+  color: #515664;
+  opacity: 0.8;
 }
 
 footer {
