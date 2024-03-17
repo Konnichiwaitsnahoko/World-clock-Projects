@@ -28,5 +28,27 @@ function updateTime() {
   tokyoCurrentAmPmElement.innerHTML = tokyoCurrentAmPm;
 }
 
+function updateCity(event) {
+  let cityTimeZone = event.target.value;
+  let cityName = cityTimeZone.split("/")[1].replace("_", " ");
+  let cityTime = moment().tz(cityTimeZone);
+  let citiesElement = document.querySelector(`#cities`);
+  citiesElement.innerHTML = `
+  <div class="city">
+    <div>
+      <h2>${cityName}</h2>
+      <div class="date">${cityTime.format("dddd, MMMM Do")}</div>
+    </div>
+    <div class="time">
+      <span class="time-text">${cityTime.format("h:mm:ss")}</span>
+      <span class="am-pm">${cityTime.format("A")}</span>
+    </div>
+  </div>`;
+}
+
 updateTime();
 setInterval(updateTime, 1000);
+
+let citiesSelectElement = document.querySelector("#selected-city");
+
+citiesSelectElement.addEventListener("change", updateCity);
