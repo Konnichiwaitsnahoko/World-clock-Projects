@@ -100,5 +100,16 @@ h2 {
 footer {
   text-align: center;
   margin-top: 20px;
+  color: #515664;
+}
+
+a:link {
   color: rgba(0, 0, 0, 0.3);
+}
+
+a:hover {
+  color: #222e54;
+}
+a:active {
+  color: #515664;
 }
