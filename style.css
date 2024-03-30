@@ -2,7 +2,8 @@ body {
   font-family: "Lato", sans-serif;
   color: #222e54;
   height: 100vh;
-  overflow: hidden;
+  overflow-y: auto;
+  background-attachment: fixed;
   background-image: linear-gradient(
     to right bottom,
     #c1d5f4,
